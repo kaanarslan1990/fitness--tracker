@@ -9,4 +9,4 @@
     
 </mat-tab-group>
 
-<khn-current-training *ngIf="ongoingTraining"></khn-current-training>
+<khn-current-training *ngIf="ongoingTraining" (trainingExit)="ongoingTraining=false"></khn-current-training>
