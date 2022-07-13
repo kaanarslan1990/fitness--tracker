@@ -1,6 +1,6 @@
-<mat-tab-group>
+<mat-tab-group *ngIf="!ongoingTraining">
     <mat-tab label="New Exercise">
-        <khn-new-training></khn-new-training>
+        <khn-new-training (trainingStart)="ongoingTraining= true"></khn-new-training>
     </mat-tab>
     
     <mat-tab label="Past Exercise">
@@ -8,3 +8,5 @@
     </mat-tab>
     
 </mat-tab-group>
+
+<khn-current-training *ngIf="ongoingTraining"></khn-current-training>
