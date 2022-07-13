@@ -1,4 +1,5 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { AuthService } from 'src/app/auth/auth-service';
 
 @Component({
   selector: 'khn-header',
@@ -8,7 +9,7 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 export class HeaderComponent implements OnInit {
   @Output() sidenavToggle =new EventEmitter<void>();
 
-  constructor() { }
+  constructor(authService: AuthService) { }
 
   ngOnInit() {
   }
